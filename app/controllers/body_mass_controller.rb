@@ -8,14 +8,14 @@ class BodyMassController < ApplicationController
   def calculate
   	weight = params[:weight].to_f
   	height = params[:height].to_f
-	@bmi = calculate_bmi(weight, height)
+	@bmi = calculate_bmi(weight, height).to_f.round(2) 
 
-  	if @bmi.to_f > 25
-  	  flash[:warning] = "You are Overweight"
-    elsif @bmi.to_f < 18.5
-  	  flash[:warning] = "You are Underweight"
+  	if @bmi > 25
+  	  flash.now[:warning] = "You are Overweight"
+    elsif @bmi < 18.5
+  	  flash.now[:warning] = "You are Underweight"
   	else
-  	  flash[:info] = "Congrats! your body mass index is Normal"
+  	  flash.now[:info] = "Congrats! your body mass index is Normal"
     end
       
   	render 'show'
