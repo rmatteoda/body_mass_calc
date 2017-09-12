@@ -7,15 +7,24 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-    <div id="container">
-      <% flash.each do |name, msg| %>
+   <%= render 'layouts/header' %>
+    <div class="container-fluid">
+	<% flash.each do |name, msg| %>
         <%= content_tag :div, msg, id: "flash_#{name}" %>
-      <% end %>
+    <% end %>
+	<div class="row-fluid">
+	<div class="span2">  
+    </div>
+  	<div class="span9"> 
       <%= yield %>
-      <div id="user_header">
+    </div>
+    <div id="user_header">
         <%= link_to "Sign Up", new_user_path %> |
         <%= link_to "Log In", new_session_path %>
-      </div>
+    </div>
+    
+    </div>
+   	  <%= render 'layouts/footer' %>
     </div>
   </body>
 </html>

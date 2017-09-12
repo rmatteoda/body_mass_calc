@@ -1,4 +1,16 @@
 
-<h1>Body Mass Index Calculator</h1>
-
-<p>challenge</p>
+<div class="container-fluid">
+    <div class="row-fluid">
+ 	  <div class="span12">
+      <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>"><%= value %></div>
+      <% end %>
+       <div class="hero-unit">
+           <h1>Body Mass Index Calculator</h1>
+           <p></p>            
+           <p>Web application to calculate the body mass index given the mass and height accordingly to the <a href="http://en.wikipedia.org/wiki/Body_mass_index#Categories">standard</a>. </p>
+           <p>You should register to use the application and calculate your body mass index.</p>
+           </div>          
+   	 </div>
+   </div>
+</div>
