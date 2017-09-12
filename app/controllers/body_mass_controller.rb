@@ -1,8 +1,14 @@
 class BodyMassController < ApplicationController
+  include BodyMassHelper
+
   def index
   end
 
-  def mass
-  	redirect_to root_url, notice: 'Body Mass Ok!'
+  def calculate
+  	weight = params[:weight].to_f
+  	height = params[:height].to_f
+  	#flash[:success] = "Nodo Eliminado"
+  	@bmi = calculate_bmi(weight, height)
+  	render 'show'
   end
 end
