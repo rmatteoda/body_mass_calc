@@ -19,6 +19,11 @@ gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+# Use jquery as the JavaScript library
+gem 'jquery-rails', "~> 4.3.0"
+# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
+#gem 'turbolinks'
+
 # Use Bootstrap SASS for style
 gem 'bootstrap-sass', '~> 3.3.6'
 
