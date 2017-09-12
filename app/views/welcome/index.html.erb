@@ -5,5 +5,5 @@
     <% if logged_in? %>
      <p>Calculate your <%= link_to 'Body Mass Index', body_mass_path %></p>
     <% else %>
-    <p>You should register to use the application and calculate your body mass index. <%= link_to "Sign Up", signup_path, :class => "btn btn-primary" %></p>
+    <p>You should register to use the application and calculate your body mass index. <%= link_to "Sign Up", signup_path %></p>
     <% end %>

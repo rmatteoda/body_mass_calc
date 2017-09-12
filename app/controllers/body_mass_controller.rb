@@ -8,7 +8,7 @@ class BodyMassController < ApplicationController
   def calculate
   	weight = params[:weight].to_f
   	height = params[:height].to_f
-	@bmi = calculate_bmi(weight, height).to_f.round(2) 
+	  @bmi = calculate_bmi(weight, height)
 
   	if @bmi > 25
   	  flash.now[:warning] = "You are Overweight"
@@ -23,7 +23,7 @@ class BodyMassController < ApplicationController
 
   def require_login
     unless logged_in?
-      flash[:error] = "You must be logged in to access this section"
+      flash.now[:error] = "You must be logged in to access this section"
       redirect_to root_url
     end
   end
