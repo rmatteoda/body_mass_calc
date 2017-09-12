@@ -1,11 +1,11 @@
 
-<div class="center jumbotron">
-  <h1>Welcome to Body Mass Index Calculator</h1>
-  <h3>
-    This is the home page for the Web application to calculate the body mass index given the mass and height accordingly to the <a href="http://en.wikipedia.org/wiki/Body_mass_index#Categories" target="_blank">standard</a>.   </h3>
+<div class="jumbotron">
+  	<h1>Body Mass Index Calculator</h1>
+    <h3>
+    This is the home page for the web application to calculate the body mass index given the weight and height accordingly to the <a href="http://en.wikipedia.org/wiki/Body_mass_index#Categories" target="_blank">standard</a>.</h3>
     <% if logged_in? %>
      <p>Calculate your <%= link_to 'Body Mass Index', body_mass_path %></p>
     <% else %>
-    <p>You should register to use the application and calculate your body mass index. <%= link_to "Sign Up", signup_path %></p>
+    <p>You should register to use the application and calculate your body mass index. <%= link_to "Sign Up", signup_path, :class => "btn btn-primary" %></p>
     <% end %>
 </div>

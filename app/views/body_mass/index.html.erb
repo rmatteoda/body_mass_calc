@@ -1,17 +1,14 @@
-<div class="center jumbotron">
-
+<div class="jumbotron">
   <h3>Body Mass index </h3>
-
   <%= form_tag calculate_mass_path do %>
-    <div class="field">
+    <div class="form-group">
       <%= label_tag :weight%> (kgs)<br />
       <%= number_field_tag :weight, nil ,:step => 0.01, :required => true %>
     </div>
-    <div class="field">
+    <div class="form-group">
       <%= label_tag :height %> (m)<br />
       <%= number_field_tag :height, nil ,:step => 0.01, :required => true %>
     </div>
-    <br>
-    <div class="actions"><%= submit_tag "Calculate" %></div>
+    <div class="actions"><%= submit_tag "Calculate", class: "btn btn-default btn-primary" %></div>
   <% end %>
 </div>
